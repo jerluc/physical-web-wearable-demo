@@ -91,6 +91,8 @@ class MetadataResolver {
                             UrlMetadata metadata = new UrlMetadata();
                             metadata.type = jsonResponse.getString("@type");
                             metadata.name = jsonResponse.getString("name");
+                            metadata.description = jsonResponse.has("description") ?
+                                    jsonResponse.getString("description") : "";
                             metadata.siteUrl = jsonResponse.getString("url");
                             metadata.imageUrl = jsonResponse.getString("image");
                             metadata.potentialActions = jsonResponse.getJSONArray("potentialAction");
@@ -136,6 +138,7 @@ class MetadataResolver {
     public static class UrlMetadata {
         public String type;
         public String name;
+        public String description;
         public String siteUrl;
         public String imageUrl;
         public Bitmap image;

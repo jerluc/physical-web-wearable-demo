@@ -270,6 +270,7 @@ public class UriBeaconDiscoveryService extends Service implements MetadataResolv
         builder.setSmallIcon(getSmallIcon(urlMetadata))
                 .setLargeIcon(urlMetadata.image)
                 .setContentTitle(urlMetadata.name)
+                .setContentText(urlMetadata.description)
                 .setPriority(NOTIFICATION_PRIORITY)
                 .setContentIntent(pendingIntent);
         try {
