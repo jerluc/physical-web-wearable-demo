@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "jerluc.me.semantic_beacon"
+        minSdkVersion 21
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories{
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    compile 'org.uribeacon:uribeacon-library-release@aar'
+    compile 'com.mcxiaoke.volley:library:1.0.+@aar'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+}
