@@ -39,7 +39,7 @@ public class UriBeaconDiscoveryService extends Service implements MetadataResolv
     private static final String NOTIFICATION_GROUP_KEY = "SEMANTIC_URI_BEACON_NOTIFICATIONS";
     private static final int NOTIFICATION_ID = 17;
     private static final int TIMEOUT_FOR_OLD_BEACONS = 2;
-    private static final int NOTIFICATION_PRIORITY = NotificationCompat.PRIORITY_LOW;
+    private static final int NOTIFICATION_PRIORITY = NotificationCompat.PRIORITY_HIGH;
     private static final long NOTIFICATION_UPDATE_GATE_DURATION = 1000;
     private boolean mCanUpdateNotifications = false;
     private NotificationManagerCompat mNotificationManager;
@@ -307,6 +307,8 @@ public class UriBeaconDiscoveryService extends Service implements MetadataResolv
                 return R.drawable.person;
             case "Restaurant":
                 return R.drawable.restaurant;
+            case "Organization":
+                return R.drawable.organization;
             default:
                 return android.R.drawable.ic_menu_help;
         }
