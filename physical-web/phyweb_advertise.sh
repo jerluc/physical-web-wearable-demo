@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec ./uribeacon_advertise.sh -u "goo.gl/ycwNjt"
+exec ./uribeacon_advertise.sh -u "goo.gl/5RVuyH"
